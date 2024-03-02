@@ -17,8 +17,8 @@ class HKBU_ChatGPT():
     #    elif type(config_path) == configparser.ConfigParser:
     #        self.config = config_path
     
-    
-    def submit(self,message):
+    # def submit(self,message):
+    def submit(message):
         conversation = [{"role": "user", "content": message}]
         
         url = (os.environ['BASICURL']) + "/deployments/" + (os.environ['MODELNAME']) + "/chat/completions/?api-version=" + (os.environ['APIVERSION'])
